@@ -1,0 +1,44 @@
+.floating-timer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--calendar-bg);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.floating-timer.active {
+  background-color: var(--button-color);
+}
+
+.timer-display {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.timer-controls {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.timer-controls button {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.floating-timer:hover {
+  transform: scale(1.1);
+}

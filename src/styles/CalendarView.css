@@ -1,0 +1,255 @@
+.calendar-view {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--calendar-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.calendar-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.month-nav-button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--button-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.month-nav-button:hover {
+  color: var(--button-hover);
+}
+
+.calendar-grid table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 4px;
+}
+
+.calendar-grid th {
+  padding: 0.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.calendar-day, .empty-day {
+  background-color: var(--note-color);
+  border-radius: 8px;
+  aspect-ratio: 1;
+  padding: 0.5rem;
+}
+
+.calendar-day {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.empty-day {
+  background-color: transparent;
+}
+
+.calendar-day:hover {
+  background-color: var(--button-color);
+  color: white;
+}
+
+.calendar-day.selected {
+  background-color: var(--button-hover);
+  color: white;
+  box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+.calendar-day.today {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.day-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.day-number {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.note-indicators {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+.note-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--button-color);
+  border-radius: 50%;
+}
+
+.note-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: var(--calendar-bg);
+  border-radius: 12px;
+}
+
+.add-note-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.note-input {
+  flex-grow: 1;
+  padding: 0.75rem;
+  border: 1px solid var(--note-color);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.add-note-button,
+.apply-suggestion-button,
+.close-tip-button {
+  padding: 0.75rem 1rem;
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-note-button:hover,
+.apply-suggestion-button:hover,
+.close-tip-button:hover {
+  background-color: var(--button-hover);
+}
+
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.note-item {
+  padding: 0.75rem;
+  background-color: var(--note-color);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.ai-suggestions {
+  margin-top: 1.5rem;
+}
+
+.ai-suggestions h4 {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.ai-suggestions ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.ai-suggestions li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.75rem;
+}
+
+.ai-assistant {
+  position: fixed;
+  left: 2rem;
+  bottom: 2rem;
+  z-index: 1000;
+}
+
+.adhd-helper {
+  width: 60px;
+  height: 60px;
+  background-color: var(--button-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.adhd-helper:hover {
+  transform: scale(1.1);
+}
+
+.comic-bubble {
+  position: absolute;
+  left: 70px;
+  bottom: 0;
+  background-color: var(--calendar-bg);
+  border: 1px solid var(--note-color);
+  padding: 1rem;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comic-bubble p {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .calendar-view {
+    padding: 1rem;
+  }
+
+  .calendar-day {
+    padding: 0.25rem;
+  }
+
+  .day-number {
+    font-size: 0.8rem;
+  }
+
+  .note-section {
+    padding: 1rem;
+  }
+
+  .add-note-form {
+    flex-direction: column;
+  }
+
+  .adhd-helper {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .comic-bubble {
+    width: 200px;
+  }
+}

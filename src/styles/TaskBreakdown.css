@@ -1,0 +1,68 @@
+.task-breakdown {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.task-breakdown-title {
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.task-form {
+  display: flex;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.task-form input {
+  flex-grow: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 25px 0 0 25px;
+  font-size: 1.1em;
+}
+
+.task-form button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.task-form button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.loading-message {
+  text-align: center;
+  font-size: 1.2em;
+  color: #4a4a4a;
+}
+
+.steps-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.steps-list {
+  padding-left: 20px;
+}
+
+.step-item {
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  line-height: 1.4;
+  background-color: rgba(255, 255, 255, 0.2);
+}
